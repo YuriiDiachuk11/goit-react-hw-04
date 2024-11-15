@@ -1,0 +1,36 @@
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 12px 30px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button:active {
+  background-color: #388e3c;
+}
+
+.button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+.button:disabled:hover {
+  background-color: #ddd;
+  color: #aaa;
+}

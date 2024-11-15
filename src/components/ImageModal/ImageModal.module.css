@@ -1,0 +1,69 @@
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.content {
+  position: relative;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 2px solid white;
+}
+
+.info {
+  margin-top: 20px;
+  text-align: center;
+  color: blueviolet;
+}
+
+.description {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.likes {
+  font-size: 28px;
+}
