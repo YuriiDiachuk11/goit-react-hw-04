@@ -24,9 +24,9 @@ function App() {
       try {
         setIsLoading(true);
         setIsError(false);
-        const response = await fetchImages(query, page);
-        setImages((prev) => [...prev, ...response]);
-        setTotalPages(response.total_pages);
+        const data = await fetchImages(query, page);
+        setImages((prev) => [...prev, ...data.results]);
+        setTotalPages(data.total_pages);
       } catch (error) {
         console.log(error);
         setIsError(true);
@@ -45,8 +45,10 @@ function App() {
   };
 
   const openModal = (imageData) => {
-    setSelectedImage(imageData);
-    setIsModalOpen(true);
+    if (!isModalOpen) {
+      setSelectedImage(imageData);
+      setIsModalOpen(true);
+    }
   };
 
   const closeModal = () => {
@@ -66,7 +68,7 @@ function App() {
         />
       )}
       {isError && <ErrorMessage />}
-      {images.length > 0 && !isLoading && (
+      {images.length > 0 && page < totalPages && !isLoading && (
         <LoadMoreBtn
           onClick={() => setPage((prev) => prev + 1)}
           disabled={isLoading}

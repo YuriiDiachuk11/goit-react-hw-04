@@ -12,7 +12,7 @@ const ImageModal = ({ isOpen, onRequestClose, imageData }) => {
       onRequestClose={onRequestClose}
       className={s.modal}
       overlayClassName={s.overlay}
-      closeTimeoutMS={200}
+      closeTimeoutMS={100}
     >
       <div className={s.content}>
         <button className={s.closeButton} onClick={onRequestClose}>
