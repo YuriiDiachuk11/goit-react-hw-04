@@ -32,13 +32,26 @@
 
 .closeButton {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4d;
   border: none;
   color: white;
-  font-size: 80px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: #ff1a1a;
+  transform: scale(1.1);
 }
 
 .image {
@@ -49,21 +62,36 @@
 }
 
 .info {
-  margin-top: 20px;
+  width: 100%;
   text-align: center;
-  color: blueviolet;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .description {
-  font-size: 28px;
+  font-size: 18px;
+  font-weight: 500;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .author {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 5px;
 }
 
 .likes {
-  font-size: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #d9f347;
+  margin-top: 5px;
 }

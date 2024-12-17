@@ -7,6 +7,7 @@ import ErrorMessage from "./ErrorMessage/ErrorMessage";
 import SearchBar from "./SearchBar/SearchBar";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./ImageModal/ImageModal";
+import ScrollToTop from "./ScrollToTop/ScrollToTop";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -81,6 +82,7 @@ function App() {
           imageData={selectedImage}
         />
       )}
+      <ScrollToTop />
     </div>
   );
 }
